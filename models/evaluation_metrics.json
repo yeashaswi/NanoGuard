@@ -1,0 +1,144 @@
+{
+  "classifier": {
+    "accuracy": 1.0,
+    "f1_score": 1.0,
+    "cv_accuracy_mean": 0.99875,
+    "cv_accuracy_std": 0.001020620726159654,
+    "confusion_matrix": [
+      [
+        85,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        92,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        59,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        98,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        57,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        110,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        99
+      ]
+    ],
+    "classes": [
+      "Ag-NP",
+      "Carbon_Soot",
+      "Clean_Air",
+      "CuO",
+      "SiO2",
+      "TiO2",
+      "ZnO"
+    ],
+    "classification_report": {
+      "Ag-NP": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 85.0
+      },
+      "Carbon_Soot": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 92.0
+      },
+      "Clean_Air": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 59.0
+      },
+      "CuO": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 98.0
+      },
+      "SiO2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 57.0
+      },
+      "TiO2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 110.0
+      },
+      "ZnO": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 99.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 600.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 600.0
+      }
+    }
+  },
+  "regressor": {
+    "r2_score": 0.9595417881261705,
+    "rmse": 14.60159775006514,
+    "mae": 4.908106896634404
+  }
+}

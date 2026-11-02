@@ -1,0 +1,40 @@
+{
+  "dataset_name": "NanoGuard Factory Emission Reaction Dataset",
+  "description": "Multi-channel reaction kinetics and LSPR spectral shift for industrial nanoparticle pollutant detection",
+  "num_records": 3000,
+  "num_features": 21,
+  "classes": [
+    "TiO2",
+    "ZnO",
+    "CuO",
+    "Ag-NP",
+    "Carbon_Soot",
+    "SiO2",
+    "Clean_Air"
+  ],
+  "sensor_channels": [
+    "s1_sno2",
+    "s2_wo3",
+    "s3_graphene",
+    "s4_au_nano",
+    "s5_cnt",
+    "s6_in2o3",
+    "s7_tio2_pt",
+    "s8_zno_nw"
+  ],
+  "class_distribution": {
+    "TiO2": 549,
+    "ZnO": 496,
+    "CuO": 490,
+    "Carbon_Soot": 462,
+    "Ag-NP": 426,
+    "Clean_Air": 293,
+    "SiO2": 284
+  },
+  "concentration_stats": {
+    "mean": 78.71329666666666,
+    "std": 73.56136459006254,
+    "min": 0.11,
+    "max": 480.0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "feature_cols": [
+    "temp_c",
+    "humidity_pct",
+    "flow_velocity_ms",
+    "s1_sno2",
+    "s2_wo3",
+    "s3_graphene",
+    "s4_au_nano",
+    "s5_cnt",
+    "s6_in2o3",
+    "s7_tio2_pt",
+    "s8_zno_nw",
+    "peak_reaction_amplitude",
+    "response_time_s",
+    "recovery_time_s",
+    "reaction_slope",
+    "lspr_shift_nm"
+  ],
+  "classes": [
+    "Ag-NP",
+    "Carbon_Soot",
+    "Clean_Air",
+    "CuO",
+    "SiO2",
+    "TiO2",
+    "ZnO"
+  ],
+  "num_features": 16,
+  "target_classification": "pollutant_type",
+  "target_regression": "concentration_ug_m3",
+  "feature_importances": {
+    "recovery_time_s": 0.1389002872406627,
+    "s7_tio2_pt": 0.09536344019229707,
+    "response_time_s": 0.09334496716371646,
+    "s8_zno_nw": 0.08598572525273078,
+    "s5_cnt": 0.08240429659863824,
+    "s1_sno2": 0.07829948278988667,
+    "s4_au_nano": 0.07809133100202852,
+    "s2_wo3": 0.0723842384043619,
+    "reaction_slope": 0.06600318311486221,
+    "s6_in2o3": 0.06558754331045762,
+    "lspr_shift_nm": 0.0539771912867069,
+    "s3_graphene": 0.05339645754592032,
+    "peak_reaction_amplitude": 0.03319142587682834,
+    "temp_c": 0.0011029688347026078,
+    "flow_velocity_ms": 0.0010723140031161313,
+    "humidity_pct": 0.0008951473830835185
+  }
+}

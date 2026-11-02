@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+venv/
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Streamlit local credentials & state
+.streamlit/credentials.toml
+
+# Build outputs (Vercel builds this automatically from source)
+dist/
+build/
+
+# OS metadata
+.DS_Store
+Thumbs.db

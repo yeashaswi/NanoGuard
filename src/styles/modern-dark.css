@@ -1,0 +1,270 @@
+:root {
+  --dp-color-ground: #050505;
+  --dp-color-panel: #0e0e0e;
+  --dp-color-hairline: #222222;
+  --dp-color-hairline-2: #303030;
+  --dp-color-bright: #f2f2f2;
+  --dp-color-read: #a6a9ad;
+  --dp-color-meta: #8a8d91;
+  --dp-color-live: #3fd6c6;
+  --dp-color-inverse-ink: #0a0a0a;
+  --dp-color-dim: #96999d;
+
+  --dp-typography-face: "Geist", "Modern Dark Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --dp-typography-mono: "Geist Mono", "Modern Dark Mono", "SFMono-Regular", Menlo, monospace;
+
+  --dp-spacing-gutter: 48px;
+  --dp-spacing-gap: 24px;
+  --dp-spacing-max: 1360px;
+
+  --dp-radius-panel: 6px;
+  --dp-radius-pill: 999px;
+  --dp-border-hairline: 1px;
+
+  --dp-motion-duration: 120ms;
+  --dp-motion-ease: ease-out;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--dp-color-ground);
+  color: var(--dp-color-read);
+  font-family: var(--dp-typography-face);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Static white light gradient pool */
+.light-pool {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 480px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(5, 5, 5, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.closing-light-pool {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  width: 50%;
+  height: 380px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(255, 255, 255, 0.03) 0%, rgba(5, 5, 5, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Layout Grid Container */
+.page-container {
+  max-width: var(--dp-spacing-max);
+  margin: 0 auto;
+  padding: 0 var(--dp-spacing-gutter);
+  position: relative;
+  z-index: 1;
+}
+
+/* Twelve Column Grid */
+.twelve-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--dp-spacing-gap);
+}
+
+/* Ruled Lines */
+.ruled-row {
+  border-top: var(--dp-border-hairline) solid var(--dp-color-hairline);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.ruled-bottom {
+  border-bottom: var(--dp-border-hairline) solid var(--dp-color-hairline);
+}
+
+/* Typography styles */
+.display-hero {
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--dp-color-bright);
+}
+
+.display-title {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--dp-color-bright);
+}
+
+.section-label {
+  font-family: var(--dp-typography-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--dp-color-meta);
+  margin-bottom: 12px;
+}
+
+.mono-value {
+  font-family: var(--dp-typography-mono);
+  font-feature-settings: "tnum" 1;
+}
+
+/* Panels */
+.graphite-panel {
+  background-color: var(--dp-color-panel);
+  border: var(--dp-border-hairline) solid var(--dp-color-hairline);
+  border-radius: var(--dp-radius-panel);
+  padding: 24px;
+}
+
+.graphite-panel-subtle {
+  background-color: var(--dp-color-panel);
+  border: var(--dp-border-hairline) solid var(--dp-color-hairline-2);
+  border-radius: var(--dp-radius-panel);
+  padding: 20px;
+}
+
+/* Compact Pill Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--dp-color-bright);
+  color: var(--dp-color-inverse-ink);
+  font-family: var(--dp-typography-face);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--dp-radius-pill);
+  border: var(--dp-border-hairline) solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--dp-motion-duration) var(--dp-motion-ease),
+              opacity var(--dp-motion-duration) var(--dp-motion-ease);
+}
+
+.btn-primary:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--dp-color-bright);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--dp-color-bright);
+  font-family: var(--dp-typography-face);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--dp-radius-pill);
+  border: var(--dp-border-hairline) solid var(--dp-color-hairline-2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color var(--dp-motion-duration) var(--dp-motion-ease),
+              background-color var(--dp-motion-duration) var(--dp-motion-ease);
+}
+
+.btn-secondary:hover {
+  border-color: var(--dp-color-meta);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--dp-color-bright);
+  outline-offset: 2px;
+}
+
+/* Tiny Mint Live Signal */
+.live-signal {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--dp-color-live);
+  flex-shrink: 0;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--dp-typography-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dp-color-bright);
+}
+
+/* Clean Input & Range Controls */
+.slider-control {
+  width: 100%;
+  appearance: none;
+  height: 2px;
+  background: var(--dp-color-hairline-2);
+  border-radius: 1px;
+  outline: none;
+}
+
+.slider-control::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dp-color-bright);
+  cursor: pointer;
+  border: 1px solid var(--dp-color-ground);
+  transition: transform var(--dp-motion-duration) var(--dp-motion-ease);
+}
+
+.slider-control::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1180px) {
+  :root {
+    --dp-spacing-gutter: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --dp-spacing-gutter: 24px;
+    --dp-spacing-gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --dp-spacing-gutter: 16px;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+  }
+}
