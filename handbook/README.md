@@ -1,6 +1,6 @@
 # 📚 NanoGuard Curriculum & Engineering Handbook
 
-A comprehensive, 6-volume educational curriculum for replicating the NanoGuard industrial nanoparticle pollutant detection platform from first principles.
+> **⚠️ Study Guide & Simulation Scope**: The books in this handbook are theoretical study notes exploring the physical chemistry, sensor kinetics, and machine learning math behind sensor arrays. NanoGuard is a software simulation based on synthetic data and has **not** been tested or deployed in an actual industrial smoke stack or factory.
 
 ---
 

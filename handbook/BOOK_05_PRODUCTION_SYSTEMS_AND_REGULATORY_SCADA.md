@@ -1,6 +1,8 @@
-# Book 5: Production Systems, Regulatory Compliance & SCADA Integration
+# Book 5: Theoretical SCADA Architectures & Regulatory Standards
 
-Detecting a nanoparticle is only the first step. In an industrial manufacturing facility, an environmental telemetry system must translate sensor signals into **automated regulatory compliance actions** within milliseconds.
+> **Note**: This chapter examines how real-world industrial environmental monitoring and SCADA abatement systems are structured conceptually. NanoGuard is a software study/simulation and does not interface with physical factory machinery.
+
+In high-volume manufacturing facilities, environmental telemetry systems must translate sensor readings into automated monitoring and compliance workflows. This section reviews relevant environmental thresholds and conceptual telemetry architectures.
 
 ---
 
@@ -18,9 +20,9 @@ Detecting a nanoparticle is only the first step. In an industrial manufacturing 
 
 ---
 
-## 2. The 4-Tier Automated Hazard Escalation Matrix
+## 2. Conceptual Multi-Tier Hazard Escalation Matrix
 
-NanoGuard implements an automated multi-tier regulatory triage pipeline:
+A conceptual multi-tier regulatory triage pipeline:
 
 ```
 Concentration
